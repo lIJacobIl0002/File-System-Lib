@@ -8,6 +8,9 @@ This is a fairly simple file system library i made for roblox. The executor you 
 This only works for json files!
 
 ```lua
+-- loading the file system
+local Settings = loadstring(game:HttpGet("https://raw.githubusercontent.com/lIJacobIl0002/File-System-Lib/main/File-System-Lib.lua"))()
+
 -- creating a new class for each folder
 local folder = Settings.new('config');
 
