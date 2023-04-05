@@ -15,7 +15,7 @@ local folder = Settings.new('config');
 folder:load_files()
 
 
--- write fileswhen writing files they get stored in the folder so you don't have to do "config/file_name.json"
+-- write files: when writing files they get stored in the folder so you don't have to do "config/file_name.json"
 folder:write_file("file_name.json", {
     ['contents'] = 'here'
 });
