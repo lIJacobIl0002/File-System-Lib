@@ -7,9 +7,6 @@ function Settings.new(folder)
 
     self.files = {};
     self.folder = folder;
-    
-    
-    
 
     if(not isfolder(folder)) then
         makefolder(folder)
@@ -23,6 +20,7 @@ end;
 function Settings:load_files()
 
     for i, v in pairs(listfiles(self.folder)) do
+        
         local file = string.match(v, "\\([%w%s%p]+)$");
         local _, fc = pcall(http.JSONDecode, http, readfile(v))
 
