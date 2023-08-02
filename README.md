@@ -1,7 +1,7 @@
 # File-System-Lib
 
-This is a fairly simple file system library i made for roblox. The executor you are using must support:
-`readfile`, `writefile`, and `listfiles`
+This is a fairly simple file system library i made for roblox. Your executor must support:
+`readfile`, `writefile`, `listfiles`, `isfolder`, and `makefolder`
 
 ## Examples on how to use the file system
 
@@ -14,15 +14,11 @@ local Settings = loadstring(game:HttpGet("https://raw.githubusercontent.com/lIJa
 -- creating a new class for each folder
 local folder = Settings.new('config');
 
--- loads files in the folder (if the foler exists)
-folder:load_files()
-
-
--- write files: when writing files they get stored in the folder so you don't have to do "config/file_name.json"
+-- write files: when writing files they get stored in the folder so you don't have to do "config/file_name.json". return nothings.
 folder:write_file("file_name.json", {
     ['contents'] = 'here'
 });
 
--- read files: same with this
-folder:read_file('file_name.json');
+-- read files: same with this. returns string (file contents)
+print(folder:read_file('file_name.json'));
 ```
