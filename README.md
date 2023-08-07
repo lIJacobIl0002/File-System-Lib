@@ -19,6 +19,6 @@ folder:write_file("file_name.json", {
     ['contents'] = 'here'
 });
 
--- read files: same with this. returns string (file contents)
+-- read files: same with this. returns table (file contents)
 print(folder:read_file('file_name.json'));
 ```
